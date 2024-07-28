@@ -3,13 +3,32 @@
 import Image from 'next/image';
 import React, { useState } from 'react'
 import UserTypeSelector from './UserTypeSelector';
+import { Button } from './ui/button';
+import { removeCollaborator, updateDocumentAccess } from '@/lib/actions/room.action';
 
 const Collaborator = ({roomId, creatorId, collaborator, email, user} : CollaboratorProps) => {
-  const [userType, setUserType] = useState('viewer');
+  const [userType, setUserType] = useState(collaborator.userType || 'viewer');
   const [loading, setLoading] = useState(false);
 
-  const shareDocumentHandler = async (type : string) => {}
-  const removeCollaboratorHandler = async (type : string) => {}
+  const shareDocumentHandler = async (type : string) => {
+    setLoading(true);
+
+    await updateDocumentAccess({
+      roomId,
+      email,
+      userType: type as UserType,
+      updatedBy: user
+    });
+
+    setLoading(false);
+  }
+  const removeCollaboratorHandler = async (type : string) => {
+    setLoading(true);
+
+    await removeCollaborator({roomId, email});
+
+    setLoading(false);
+  }
   
   return (
     <li className='flex items-center justify-between gap-2 py-3'>
@@ -39,12 +58,15 @@ const Collaborator = ({roomId, creatorId, collaborator, email, user} : Collabora
           Owner
         </p>
       ):(
-        <div className='flex items-center'>
-          <UserTypeSelector
+        <div className="flex items-center">
+          <UserTypeSelector 
             userType={userType as UserType}
             setUserType={setUserType || 'viewer'}
             onClickHandler={shareDocumentHandler}
           />
+          <Button type="button" onClick={() => removeCollaboratorHandler(collaborator.email)}>
+            Remove
+          </Button>
         </div>
       )}
     </li>
