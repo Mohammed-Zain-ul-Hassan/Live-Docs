@@ -46,3 +46,39 @@ Built with cutting-edge technologies, LiveDocs showcases the developer's skills 
 ```bash
 git clone https://github.com/Mohammed-Zain-ul-Hassan/Live-Docs.git
 cd Live-Docs
+```
+### Installation
+
+```bash
+npm install
+```
+
+### Set Up Environment Variables
+
+Create a *.env* file in the root directory:
+
+```bash
+# Clerk
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+
+# Liveblocks
+NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY=
+LIVEBLOCKS_SECRET_KEY=
+```
+Replace placeholder values with your Clerk & Liveblocks credentials.
+
+### Running the Project
+
+Run the following command in your terminal to run the project
+
+```bash
+npm run dev
+```
+
+### 📜 License
+This project is licensed under the MIT License.
+
+Made with ❤️ by *Mohammed Zain ul Hassan*
