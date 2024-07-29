@@ -81,4 +81,4 @@ npm run dev
 ### 📜 License
 This project is licensed under the MIT License.
 
-Made with ❤️ by *Mohammed Zain ul Hassan*
+<p align="center">Made with ❤️ by <a href="https://github.com/Mohammed-Zain-ul-Hassan">Mohammed Zain ul Hassan</a></p>
