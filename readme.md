@@ -6,7 +6,7 @@ LiveDocs is a real-time collaborative document editor, bringing the power of Goo
 
 Built with cutting-edge technologies, LiveDocs showcases the developer's skills in creating a real-time environment that leaves a lasting impact. It's not just a document editor; it's a collaborative space where ideas come to life! ✨
 
-🔗 [Live Demo](https://live-docs-5xv2k9ke4-mohammed-zain-ul-hassans-projects.vercel.app/) | [GitHub Repo](https://github.com/Mohammed-Zain-ul-Hassan/Live-Docs)
+🔗 [Live Demo](https://live-docs-5xv2k9ke4-mohammed-zain-ul-hassans-projects.vercel.app/)
 
 ## ⚙️ Tech Stack
 
