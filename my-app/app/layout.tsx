@@ -17,8 +17,23 @@ const fontSans = FontSans({
 export const metadata: Metadata = {
   title: 'LiveDocs',
   description: 'Your go-to collaborative editor',
-  themeColor: '#000000', // Optional: Customize theme color for PWA
-  manifest: '/manifest.json', // Ensure the manifest file is linked
+  manifest: '/manifest.json',
+  appleWebApp: {
+    title: 'LiveDocs',
+    statusBarStyle: 'default',
+    capable: true,
+  },
+  icons: {
+    icon: '/favicon.ico',
+    apple: [
+      { url: '/icon-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icon-512x512.png', sizes: '512x512', type: 'image/png' },
+    ],
+  },
+};
+
+export const viewport = {
+  themeColor: '#f69435',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -33,10 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       }}
     >
       <html lang="en" suppressHydrationWarning>
-        <head>
-          <meta name="theme-color" content="#000000" /> {/* Optional: Theme color for PWA */}
-          <link rel="manifest" href="/manifest.json" /> {/* Link to the PWA manifest */}
-        </head>
+        <head />
         <body
           className={cn(
             "min-h-screen font-sans antialiased",
