@@ -59,14 +59,14 @@ Create a *.env* file in the root directory:
 
 ```bash
 # Clerk
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
-CLERK_SECRET_KEY=
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY= #Your Key
+CLERK_SECRET_KEY= #Your Key
 NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
 NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
 
 # Liveblocks
-NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY=
-LIVEBLOCKS_SECRET_KEY=
+NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY= #Your Key
+LIVEBLOCKS_SECRET_KEY= #Your Key
 ```
 Replace placeholder values with your Clerk & Liveblocks credentials.
 
